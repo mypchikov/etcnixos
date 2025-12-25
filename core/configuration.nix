@@ -84,6 +84,8 @@
 
   programs.nix-ld.enable = true;
 
+  services.flatpak.enable = true;
+
   services.openssh.enable = true;
   
   programs.hyprland = {

@@ -4,17 +4,12 @@
 }: {
   home.packages = with pkgs; [
     appeditor
-    element-desktop
     telegram-desktop	
     (discord.override {
       withOpenASAR = false;
       withVencord = true;
     })
-
     qbittorrent
-    (vivaldi.override {
-      proprietaryCodecs = true;
-    })
     krita
     drawio
     obsidian
@@ -35,7 +30,6 @@
     cargo
     gcc
     avalonia-ilspy
-    beekeeper-studio
     zed-editor
     nixd
     github-cli
@@ -44,17 +38,25 @@
     jdk25_headless
     wev
     nmap
+    alacritty
     scrcpy
+    nodejs
+    pnpm
+    android-tools
 
     # minecraft shenanigans
     prismlauncher
     glfw
-    
+
+    # games
+    osu-lazer-bin
+
     # rice
     rofi
     waybar
     swaybg
-    pywal16
+    pywal
+    imagemagick
   ];
 
   nixpkgs.overlays = [
