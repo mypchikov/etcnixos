@@ -2,17 +2,11 @@
   pkgs,
   ...
 }: {
-  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     appeditor
     element-desktop
     telegram-desktop	
     wasistlos
-    (discord.override {
-      withOpenASAR = false;
-      withVencord = true;
-    })
-
     qbittorrent
     (vivaldi.override {
       proprietaryCodecs = true;
@@ -40,6 +34,7 @@
     beekeeper-studio
     zed-editor
     nixd
+    github-cli
     pkg-config
     rustls-libssl
     jdk25_headless
@@ -52,7 +47,7 @@
     glfw
     
     # rice
-    wofi
+    rofi
     waybar
     swaybg
     pywal16

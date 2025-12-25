@@ -19,10 +19,12 @@
         ./core/configuration.nix
 
         home-manager.nixosModules.home-manager
-        {
-          home-manager.useUserPackages = true;
-          home-manager.users.muri = import ./home/home.nix;
-        }
+{
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.muri = import ./home/home.nix;
+      home-manager.extraSpecialArgs = { inherit inputs; }; 
+       }
       ];
     };
   };
