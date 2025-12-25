@@ -6,7 +6,11 @@
     appeditor
     element-desktop
     telegram-desktop	
-    wasistlos
+    (discord.override {
+      withOpenASAR = false;
+      withVencord = true;
+    })
+
     qbittorrent
     (vivaldi.override {
       proprietaryCodecs = true;
