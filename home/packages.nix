@@ -60,10 +60,6 @@
     imagemagick
   ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
   nixpkgs.overlays = [
     (self: super: {
       qt6Packages = super.qt6Packages.overrideScope (_: prev: {
