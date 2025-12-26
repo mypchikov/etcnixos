@@ -23,6 +23,7 @@
     audacity
     nautilus
     vlc
+    throne
 
     # dev tools
     jetbrains-toolbox
@@ -57,6 +58,10 @@
     swaybg
     pywal
     imagemagick
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
   ];
 
   nixpkgs.overlays = [
