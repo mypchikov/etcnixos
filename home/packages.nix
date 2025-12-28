@@ -19,11 +19,9 @@
     penpot-desktop
     postman
     via
-    libreoffice-qt
     audacity
     nautilus
     vlc
-    throne
 
     # dev tools
     jetbrains-toolbox
@@ -58,6 +56,7 @@
     swaybg
     pywal
     imagemagick
+    quickshell
   ];
 
   nixpkgs.overlays = [

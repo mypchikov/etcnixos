@@ -1,14 +1,5 @@
 { config, pkgs, ... }:{
 
-  virtualisation.docker = {
-    enable = true;
-
-    daemon.settings = {
-      dns = ["8.8.8.8" "8.8.4.4" "1.1.1.1"];
-      dns-opts = ["use-vc"];
-    };
-  };
-
   imports = [
     ./hardware.nix
     ./packages.nix
@@ -64,24 +55,15 @@
 
   programs.firefox.enable = true;
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-  };
-
   programs.fish.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  programs.nix-ld.enable = true;
-
   services.flatpak.enable = true;
-
-  services.openssh.enable = true;
+ 
+  programs.throne.tunMode.enable = true; 
 
   programs.hyprland = {
     enable = true;
