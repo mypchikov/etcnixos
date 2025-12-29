@@ -22,8 +22,7 @@
     audacity
     nautilus
     vlc
-    flameshot
-    wireguard-tools
+    throne
 
     # dev tools
     jetbrains-toolbox
@@ -45,7 +44,7 @@
     pnpm
     android-tools
 
-    # minecraft
+    # minecraft shenanigans
     prismlauncher
     glfw
 

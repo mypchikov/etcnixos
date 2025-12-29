@@ -14,6 +14,7 @@
   time.timeZone = "Asia/Vladivostok";
 
   services.xserver.enable = true;
+  services.xserver.windowManager.i3.enable = true;
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 

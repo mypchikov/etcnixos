@@ -13,7 +13,6 @@
     #davinci-cracked
     #davinci-resolve
     fzf
-    throne
   ];
 
   fonts.packages = with pkgs; [
