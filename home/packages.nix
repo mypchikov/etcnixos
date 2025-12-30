@@ -9,18 +9,8 @@
       withOpenASAR = false;
       withVencord = true;
     })
-    qbittorrent
-    krita
-    aseprite
-    drawio
     obsidian
-    (blender.override {
-      #cudaSupport=true;
-    })
-    penpot-desktop
-    postman
     via
-    audacity
     nautilus
     spotify
     vlc
@@ -32,8 +22,6 @@
     rustc
     cargo
     gcc
-    avalonia-ilspy
-    zed-editor
     nixd
     github-cli
     pkg-config
@@ -41,7 +29,7 @@
     jdk25_headless
     wev
     nmap
-    alacritty
+    kitty
     scrcpy
     nodejs
     pnpm
@@ -61,5 +49,7 @@
     pywal
     imagemagick
     quickshell
+    swaynotificationcenter
+    starship
   ];
 }

@@ -1,3 +1,4 @@
+
 { config, pkgs, ... }:{
 
   imports = [
@@ -13,10 +14,7 @@
 
   time.timeZone = "Asia/Vladivostok";
 
-  services.xserver.enable = true;
-  services.xserver.windowManager.i3.enable = true;
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -29,10 +27,6 @@
     LC_PAPER = "ru_RU.UTF-8";
     LC_TELEPHONE = "ru_RU.UTF-8";
     LC_TIME = "ru_RU.UTF-8";
-  };
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   services.pulseaudio.enable = false;
@@ -62,9 +56,7 @@
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  services.flatpak.enable = true;
- 
-  programs.throne.tunMode.enable = true; 
+  services.flatpak.enable = true; 
 
   programs.hyprland = {
     enable = true;
