@@ -1,6 +1,15 @@
 
 { config, pkgs, ... }:{
 
+  virtualisation.docker = {
+    enable = true;
+
+    daemon.settings = {
+      dns = ["8.8.8.8" "8.8.4.4" "1.1.1.1"];
+      dns-opts = ["use-vc"];
+    };
+  };
+
   imports = [
     ./hardware.nix
     ./packages.nix
@@ -17,17 +26,6 @@
   services.displayManager.gdm.enable = true;
 
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "ru_RU.UTF-8";
-    LC_IDENTIFICATION = "ru_RU.UTF-8";
-    LC_MEASUREMENT = "ru_RU.UTF-8";
-    LC_MONETARY = "ru_RU.UTF-8";
-    LC_NAME = "ru_RU.UTF-8";
-    LC_NUMERIC = "ru_RU.UTF-8";
-    LC_PAPER = "ru_RU.UTF-8";
-    LC_TELEPHONE = "ru_RU.UTF-8";
-    LC_TIME = "ru_RU.UTF-8";
-  };
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -56,7 +54,17 @@
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  services.flatpak.enable = true; 
+  services.flatpak.enable = true;
+
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  }; 
 
   programs.hyprland = {
     enable = true;

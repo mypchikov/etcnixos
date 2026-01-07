@@ -15,6 +15,7 @@
     spotify
     vlc
     flameshot
+    mangohud
     wireguard-tools
 
     # dev tools
@@ -39,16 +40,12 @@
     prismlauncher
     glfw
 
-    # games
-    osu-lazer-bin
-
     # rice
     rofi
     waybar
     swaybg
     pywal
     imagemagick
-    quickshell
     swaynotificationcenter
     starship
   ];
