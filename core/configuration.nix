@@ -51,13 +51,22 @@
   programs.fish.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  
+ 
+  programs.nix-ld.enable = true;
+
+  programs.throne = {
+      enable = true;
+      tunMode.enable = true;
+};
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.flatpak.enable = true;
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
+  services.openssh.enable = true;
 
   programs.steam = {
     enable = true;
